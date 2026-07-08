@@ -173,15 +173,27 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
 
               <div className="grid min-h-[calc(100vh-22rem)] items-center gap-6 pt-2 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
                 <div className="max-w-4xl self-center justify-self-start text-left">
-                  <motion.span
-                    initial={{ opacity: 0, y: -18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.15 }}
-                    className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-neutral-100 backdrop-blur-md"
-                  >
-                    <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-                    Available for Repairs
-                  </motion.span>
+                  <div className="mb-4 flex flex-wrap items-center gap-3">
+                    <motion.span
+                      initial={{ opacity: 0, y: -18 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.15 }}
+                      className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-neutral-100 backdrop-blur-md"
+                    >
+                      <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+                      Available for Repairs
+                    </motion.span>
+
+                    <motion.span
+                      initial={{ opacity: 0, y: -18 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/12 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-cyan-100 backdrop-blur-md"
+                    >
+                      <span className="h-2.5 w-2.5 rounded-full bg-cyan-300" />
+                      KOKO Available
+                    </motion.span>
+                  </div>
 
                   <motion.h1
                     initial={{ opacity: 0, scale: 0.96 }}
@@ -190,7 +202,7 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
                     className="font-display max-w-4xl text-4xl font-extrabold leading-[0.98] tracking-tight text-white drop-shadow-md sm:text-5xl md:text-6xl xl:text-7xl"
                     id="hero-title"
                   >
-                    Fast &amp; Reliable Mobile Repair in Mirigama
+                    One Day Repair in Mirigama
                   </motion.h1>
                 </div>
 
@@ -222,22 +234,22 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
                 </motion.div>
               </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.45 }}
-                className="pointer-events-none absolute right-0 bottom-0 left-0 -mb-2 overflow-hidden pt-6"
-                id="hero-watermark"
-              >
-                <div className="font-display text-[4.1rem] leading-none font-extrabold tracking-[-0.08em] text-white sm:text-[6.5rem] lg:text-[9rem] xl:text-[11rem]">
-                  Best Mobile
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>
 
-        <div className="flex min-h-[160vh] items-end py-16">
+        <div className="relative flex min-h-[160vh] items-end py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="pointer-events-none absolute right-0 left-0 top-[0vh] -mb-2 overflow-hidden pt-6"
+            id="hero-watermark"
+          >
+            <div className="font-display text-[4.1rem] leading-none font-extrabold tracking-[-0.08em] text-white sm:text-[6.5rem] lg:text-[9rem] xl:text-[11rem]">
+              BEST MOBILE
+            </div>
+          </motion.div>
           <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto mb-16 max-w-3xl text-center">
               <span className="rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-bold uppercase tracking-widest text-cyan-100">
@@ -294,9 +306,20 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:max-w-2xl">
-              <div className="rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-sm">
-                <p className="text-xs uppercase tracking-[0.24em] text-neutral-300">Frame Count</p>
-                <p className="mt-2 text-3xl font-extrabold text-white">{FRAME_COUNT}</p>
+              <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center backdrop-blur-sm">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-slate-500">
+                  Payment Partner
+                </p>
+                <div className="mt-3 text-[2.4rem] font-black uppercase leading-none tracking-[-0.12em] text-pink-300 sm:text-[3rem]">
+                  <span
+                    className="[text-shadow:1px_0_0_#1d4ed8,-1px_0_0_#1d4ed8,0_1px_0_#1d4ed8,0_-1px_0_#1d4ed8]"
+                  >
+                    KOKO
+                  </span>
+                </div>
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+                  Available Here
+                </p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-sm">
                 <p className="text-xs uppercase tracking-[0.24em] text-neutral-300">Animation Status</p>
