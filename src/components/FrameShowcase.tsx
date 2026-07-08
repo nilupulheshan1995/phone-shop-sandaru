@@ -145,13 +145,13 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
         <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(2,6,23,0.78),rgba(2,6,23,0.28)_45%,rgba(2,6,23,0.82))]" />
       </div>
 
-      <div className="relative z-10">
+      <div className="absolute inset-x-0 top-0 z-10">
         <div
-          className="flex min-h-[calc(100vh-5rem)] items-center"
+          className="flex items-start"
           style={{ minHeight: `calc(100vh - ${STICKY_TOP}px)` }}
         >
-          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="relative flex min-h-[calc(100vh-5rem)] flex-col justify-between py-8 sm:py-10">
+          <div className="mx-auto w-full max-w-none px-4 pt-0 sm:px-6 lg:px-10 xl:px-14">
+            <div className="relative min-h-[calc(100vh-5rem)] pt-10 pb-8 sm:pb-10">
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -171,13 +171,13 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
                 </span>
               </motion.div>
 
-              <div className="grid flex-1 items-center gap-10 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
-                <div className="max-w-3xl">
+              <div className="grid min-h-[calc(100vh-22rem)] items-center gap-6 pt-2 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+                <div className="max-w-4xl self-center justify-self-start text-left">
                   <motion.span
                     initial={{ opacity: 0, y: -18 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.15 }}
-                    className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-neutral-100 backdrop-blur-md"
+                    className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-neutral-100 backdrop-blur-md"
                   >
                     <span className="h-2.5 w-2.5 rounded-full bg-primary" />
                     Available for Repairs
@@ -187,7 +187,7 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.7, ease: 'easeOut' }}
-                    className="font-display max-w-3xl text-4xl font-extrabold leading-[0.98] tracking-tight text-white drop-shadow-md sm:text-5xl md:text-6xl xl:text-7xl"
+                    className="font-display max-w-4xl text-4xl font-extrabold leading-[0.98] tracking-tight text-white drop-shadow-md sm:text-5xl md:text-6xl xl:text-7xl"
                     id="hero-title"
                   >
                     Fast &amp; Reliable Mobile Repair in Mirigama
@@ -198,7 +198,7 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.35 }}
-                  className="max-w-md justify-self-start text-left lg:justify-self-end"
+                  className="max-w-md self-center justify-self-start pt-2 text-left lg:justify-self-end lg:pt-12"
                   id="hero-side-copy"
                 >
                   <p
@@ -226,7 +226,7 @@ export default function FrameShowcase({ onOpenBooking, onSelectService }: FrameS
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.45 }}
-                className="pointer-events-none relative -mb-2 overflow-hidden pt-6"
+                className="pointer-events-none absolute right-0 bottom-0 left-0 -mb-2 overflow-hidden pt-6"
                 id="hero-watermark"
               >
                 <div className="font-display text-[4.1rem] leading-none font-extrabold tracking-[-0.08em] text-white sm:text-[6.5rem] lg:text-[9rem] xl:text-[11rem]">
